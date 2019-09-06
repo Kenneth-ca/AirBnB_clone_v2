@@ -6,7 +6,6 @@ from models import storage, State
 from flask import Flask, render_template
 app = Flask(__name__)
 app.url_map.strict_slashes = False
-a_dict = storage.all('State').values()
 
 
 @app.route('/states_list')
@@ -14,6 +13,7 @@ def states_list():
     """
     Function that returns a list of states
     """
+    a_dict = storage.all('State').values()
     return render_template('7-states_list.html', my_dict=a_dict)
 
 if __name__ == '__main__':
