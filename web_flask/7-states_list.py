@@ -16,6 +16,7 @@ def states_list():
     a_dict = storage.all('State').values()
     return render_template('7-states_list.html', my_dict=a_dict)
 
+
 @app.teardown_appcontext
 def teardown(exception=None):
     storage.close()
