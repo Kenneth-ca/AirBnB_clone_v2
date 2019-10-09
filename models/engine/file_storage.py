@@ -74,4 +74,6 @@ class FileStorage:
                 self.__objects.pop(del_obj)
 
     def close(self):
+        """ close method that calls reload
+        """
         self.reload()
